@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Pokeman</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light border border-dark mt-2 d-flex justify-content-start"
+            style="background-color: #e0ffe2;">
+
+            <img src="https://i.ibb.co/F3VR1qH/pball.png" width="100">
+            <h1 class="text-primary">Pokeman</h1>
+        </nav><br>
+    </div>
+    <div class="container border border-dark" style="background-color: #a4cfff;">
+        <form id="search-poke-form" class="pt-3">
+            <input type="text" name="name" placeholder="Enter Name or ID">
+            <button class="btn btn-success btn-sm">Search!</button>
+        </form><br>
+        <div id="output"></div>
+        <div id="poke-list" class="pb-3"></div>
+    </div>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "",//secret
+            authDomain: "pokeman-ff1c3.firebaseapp.com",
+            databaseURL: "https://pokeman-ff1c3.firebaseio.com",
+            projectId: "pokeman-ff1c3",
+            storageBucket: "pokeman-ff1c3.appspot.com",
+            messagingSenderId: "23616102516",
+            appId: "1:23616102516:web:b494a252096dd2c6fd7121"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+<div class="container">
+    <footer style="background-color: #e0ffe2;" class="nav justify-content-center border border-dark mb-2 mt-2">
+        <p class="font-weight-lighter">© Edgar Palic - MAP18</p>
+    </footer>
+</div>
+
+</html>
